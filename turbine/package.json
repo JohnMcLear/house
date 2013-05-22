@@ -1,0 +1,13 @@
+{
+  "name"           : "wind_turbine_alert",
+  "description"    : "Sends email alert if raspberry pi realizes wind power monitor output is not working when it should (UK Only)",
+  "homepage"       : "somewhere",
+  "keywords"       : ["raspberry pi"],
+  "author"         : "John McLear",
+  "dependencies"   : {
+    "emailjs" : "*",
+    "async" : "*",
+    "request" : "*",
+	"exec-sync" : "*"
+  }
+}
