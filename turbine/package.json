@@ -7,7 +7,6 @@
   "dependencies"   : {
     "emailjs" : "*",
     "async" : "*",
-    "request" : "*",
-	"exec-sync" : "*"
+    "request" : "*"
   }
 }
