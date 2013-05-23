@@ -74,7 +74,7 @@ while True:
 	changechannel(adc_address1, 0x9C)
 	output = getadcreading(adc_address1,0x9C);
 	if output > 100:
-		print("Generating");
+		print(output);
 		sys.exit(0);
 	else:
 		print (output);
