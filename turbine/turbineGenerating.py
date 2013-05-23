@@ -73,7 +73,7 @@ def getadcreading(address, adcConfig):
 while True:
 	changechannel(adc_address1, 0x9C)
 	output = getadcreading(adc_address1,0x9C);
-	if output > 2000:
+	if output > 100:
 		print("Generating");
 		sys.exit(0);
 	else:
