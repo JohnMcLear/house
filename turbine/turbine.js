@@ -5,6 +5,7 @@ You need Internet access, an ADC board, a Pi, A wind Turbine, A way to get a 5v 
 */
 var request = require("request"), async = require("async"), email = require("emailjs"), sys = require('sys'), settings = require("./settings.js"), exec = require('child_process').exec;
 var metOfficeUrl = "http://datapoint.metoffice.gov.uk/public/data/val/wxobs/all/json/"+settings.metOfficeLocation+"?res=hourly&key="+settings.metOfficeKey;
+console.log(metOfficeUrl);
 console.log("Est wind speed turbine should spin at: " +settings.estWindSpeedOfWindy + "mph");
 async.waterfall([
   
@@ -18,9 +19,9 @@ async.waterfall([
         var times = body.SiteRep.DV.Location.Period[0].Rep; // keep an eye on this..
         for (var i = 0; i < times.length; i++) {
           if(times[i]["$"] == mins){ // If it's the current hour
-            console.log("Wind speed outside according to met office is:", times[i]["W"]);
-            console.log("Do We expect the turbine to be spinning?", times[i]["W"] >= settings.estWindSpeedOfWindy);
-            if(times[i]["W"] >= settings.estWindSpeedOfWindy){
+            console.log("Wind speed outside according to met office is:", times[i]["S"]);
+            console.log("Do We expect the turbine to be spinning?", times[i]["S"] >= settings.estWindSpeedOfWindy);
+            if(times[i]["S"] >= settings.estWindSpeedOfWindy){
 	      callback(null, true); // calls back if its windy or not
   	    }else{
 	      console.log("It is not even windy enough to care");
