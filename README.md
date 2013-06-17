@@ -5,6 +5,7 @@
 ### Getting started
 
 * apt-get install nodejs python 
+* Expand the FS & Make sure datetime is correct: ``raspi-config``
 * follow this guide: https://github.com/abelectronicsuk/deltasigmapi
 * clone the repo git://github.com/JohnMcLear/house.git
 * cd house/turbine
