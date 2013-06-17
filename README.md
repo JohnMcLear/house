@@ -8,7 +8,7 @@
 * follow this guide: https://github.com/abelectronicsuk/deltasigmapi
 * clone the repo git://github.com/JohnMcLear/house.git
 * cd house/turbine
-* npm install request
+* npm install request async
 * sudo up (or become root, it's sad but this is required) ;(
 * create a settings.js file that looks like the settings.js section below
 * test with node turbine.js
