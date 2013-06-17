@@ -8,8 +8,7 @@
 * Expand the FS & Make sure datetime is correct: ``raspi-config``
 * follow this guide: https://github.com/abelectronicsuk/deltasigmapi
 * clone the repo ``git clone git://github.com/JohnMcLear/house.git``
-* cd house/turbine
-* ``npm install request async emailjs``
+* ``cd house/turbine && npm install request async emailjs``
 * sudo up (or become root, it's sad but this is required) ;(
 * create a settings.js file that looks like the settings.js section below
 * test with node turbine.js
