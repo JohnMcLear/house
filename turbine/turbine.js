@@ -18,8 +18,8 @@ async.waterfall([
       if (!error && response.statusCode == 200) {
         body = JSON.parse(body); // Response
         if ( body.SiteRep.DV.Location.Period.Rep.S >= settings.estWindSpeedOfWindy){
-          console.log("Wind speed outside according to met office is:", times[i]["S"]);
-          console.log("Do We expect the turbine to be spinning?", times[i]["S"] >= settings.estWindSpeedOfWindy);
+          console.log("Wind speed outside according to met office is:", body.SiteRep.DV.Location.Period.Rep.S);
+          console.log("Do We expect the turbine to be spinning?", body.SiteRep.DV.Location.Period.Rep.S >= settings.estWindSpeedOfWindy);
           callback(null, true); // calls back if its windy or not
         }else{
           console.log("It is not even windy enough to care");
